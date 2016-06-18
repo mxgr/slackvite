@@ -12,6 +12,6 @@ gem install slackvite
 In your controller:
 ```
 email = 'matt@roseware.io'
-slackvite = Slackvite::Configuration.new('your-token')
+slackvite = Slackvite::Configuration.new('your_token', 'your_subdomain')
 slackvite.sendTo(email)
 ```
