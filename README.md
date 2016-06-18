@@ -1,4 +1,6 @@
 # Slackvite
+![travis-ci](https://travis-ci.org/rosendin/slackvite.svg?branch=master)
+
 An email form for Slack community invitations
 
 ### Installation
