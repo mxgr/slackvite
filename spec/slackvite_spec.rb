@@ -1,7 +1,8 @@
 require "slackvite"
 
-describe Slackvite::Configuration.new do
-  it "returns the inputs" do
-    puts Slackvite::Configuration.new(token: "faketoken", subdomain: "swsc-community")
+describe "slackvite" do
+  let(:invite) { Slackvite::Invite.new('faketoken', 'swsc-community') }
+  it "creates an invite" do
+    expect(invite.token).to eql('faketoken')
   end
 end
