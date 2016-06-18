@@ -9,11 +9,10 @@ Gem::Specification.new do |s|
   s.summary       = "Make it easy to invite users to your Slack community team"
   s.authors       = ["Matthew Rosendin"]
   s.email         = "matt@roseware.io"
-  s.homepage      = "http://rubygems.org/gems/slack-invite"
+  s.homepage      = "http://github.com/rosendin/slackvite"
   s.license       = "MIT"
 
   s.files         = Dir.glob('{lib}/**/*')
 
-  s.add_development_dependency "rspec", "~> 3.2"
   s.add_runtime_dependency "http", "~> 2.0.1"
 end

@@ -1,0 +1,11 @@
+language: ruby
+sudo: false
+
+bundler_args: --without development doc
+
+rvm:
+  - 2.3.0
+
+branches:
+  only:
+    - master
