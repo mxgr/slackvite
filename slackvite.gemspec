@@ -15,6 +15,5 @@ Gem::Specification.new do |s|
   s.files         = Dir.glob('{lib}/**/*')
 
   s.add_development_dependency "rspec", "~> 3.2"
-  s.add_development_dependency "rake", "~> 11.1.2"
   s.add_runtime_dependency "http", "~> 2.0.1"
 end
