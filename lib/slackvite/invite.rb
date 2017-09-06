@@ -1,4 +1,5 @@
 require "http"
+require "json"
 
 module Slackvite
   class Invite
@@ -12,16 +13,16 @@ module Slackvite
       @subdomain = subdomain
     end
 
-    def sendTo(email)
+    def send_invite(email)
       @email = email
-      puts "Sending invite to #{email}."
       url   = "https://#{@subdomain}.slack.com/api/users.admin.invite"
-      options = { :form => { email: @email, token: @token, set_active: true } }
+      options = { form: { email: @email, token: @token, set_active: true } }
       response = HTTP.auth("Bearer #{@token}").post(url, options)
-      if response.code == 200
-        puts "Success!"
+      response = JSON.parse(response.body)
+      if response["ok"] == "true"
+        true
       else
-        puts "Something went wrong."
+        false
       end
     end
 
