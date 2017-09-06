@@ -20,7 +20,7 @@ module Slackvite
       response = HTTP.auth("Bearer #{@token}").post(url, options)
       response = JSON.parse(response.body)
       puts response
-      if response["ok"] == "true"
+      if response["ok"] == true
         true
       else
         false
