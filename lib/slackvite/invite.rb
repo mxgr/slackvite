@@ -19,6 +19,7 @@ module Slackvite
       options = { form: { email: @email, token: @token, set_active: true } }
       response = HTTP.auth("Bearer #{@token}").post(url, options)
       response = JSON.parse(response.body)
+      puts response
       if response["ok"] == "true"
         true
       else
